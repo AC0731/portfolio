@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akanksha Chavda — customer support, IT support, and full-stack project portfolio." />
+  <title>Akanksha Chavda — Support & Software Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1221'/%3E%3Cpath d='M17 45 29 17h7l12 28h-8l-2-6H27l-2 6zm13-13h6l-3-8z' fill='%235eead4'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav-shell">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Akanksha Chavda, home">AC<span>.</span></a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="eyebrow"><span></span> Customer support · IT support · Full-stack projects</div>
+      <h1>I build clear, dependable systems for people who need answers.</h1>
+      <p class="hero-copy">I’m Akanksha Chavda, an English-speaking support professional and developer based in Ahmedabad, India. My work combines customer communication, technical troubleshooting, and practical software built around real support workflows.</p>
+      <div class="actions">
+        <a class="button primary" href="#projects">View projects <span aria-hidden="true">↘</span></a>
+        <a class="button secondary" href="https://github.com/AC0731" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="proof" aria-label="Portfolio highlights">
+        <div><strong>2</strong><span>production-style case studies</span></div>
+        <div><strong>14+</strong><span>months remote administration</span></div>
+        <div><strong>CI</strong><span>tests and GitHub Actions</span></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="projects">
+      <div class="section-heading">
+        <p>Selected work</p>
+        <h2>Projects built to solve operational problems.</h2>
+      </div>
+
+      <article class="project featured">
+        <div class="project-number">01</div>
+        <div class="project-body">
+          <div class="project-topline">
+            <span class="status">Live project</span>
+            <span>React · FastAPI · SQLAlchemy</span>
+          </div>
+          <h3>SupportOps Diagnostic Portal</h3>
+          <p class="lede">A full-stack IT support workspace that turns network diagnostics into structured troubleshooting insights and trackable support tickets.</p>
+          <div class="project-grid">
+            <div>
+              <h4>The problem</h4>
+              <p>Technical evidence is often scattered across commands, notes, and ticket fields. Support agents need a repeatable path from diagnosis to documented action.</p>
+            </div>
+            <div>
+              <h4>What I built</h4>
+              <p>Public-target diagnostics, ticket creation and status management, searchable queues, analytics, saved insights, validation, redaction, and graceful cloud fallbacks.</p>
+            </div>
+            <div>
+              <h4>Engineering proof</h4>
+              <p>Reusable React components, REST APIs, persistent data, automated frontend and backend tests, GitHub Actions, CORS debugging, and deployed services.</p>
+            </div>
+          </div>
+          <div class="tags" aria-label="SupportOps technologies">
+            <span>React</span><span>Vite</span><span>Python</span><span>FastAPI</span><span>REST APIs</span><span>Vitest</span><span>Pytest</span>
+          </div>
+          <div class="project-links">
+            <a href="https://it-support-diagnostic-portal.vercel.app" target="_blank" rel="noreferrer">Open live demo ↗</a>
+            <a href="https://github.com/AC0731/it-helpdesk-frontend" target="_blank" rel="noreferrer">Frontend code ↗</a>
+            <a href="https://github.com/AC0731/it-helpdesk-backend" target="_blank" rel="noreferrer">Backend code ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-number">02</div>
+        <div class="project-body">
+          <div class="project-topline">
+            <span class="status muted">Portfolio build</span>
+            <span>Next.js · TypeScript · PostgreSQL</span>
+          </div>
+          <h3>SaaS Foundation</h3>
+          <p class="lede">A production-minded subscription application covering authentication, protected workspaces, billing lifecycles, data ownership, and abuse protection.</p>
+          <div class="project-grid">
+            <div>
+              <h4>Product flow</h4>
+              <p>Account creation and sign-in, protected dashboards, database-backed notes, free and Pro limits, Stripe Checkout, and customer billing management.</p>
+            </div>
+            <div>
+              <h4>Safety</h4>
+              <p>Password hashing, ownership checks, protected server actions, environment-variable hygiene, webhook handling, and database-backed rate limiting.</p>
+            </div>
+            <div>
+              <h4>Quality</h4>
+              <p>Typed business logic, Prisma validation, Vitest coverage, CI checks, loading and error states, and deployment-ready architecture.</p>
+            </div>
+          </div>
+          <div class="tags" aria-label="SaaS Foundation technologies">
+            <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>NextAuth</span><span>Stripe</span><span>Vitest</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AC0731/saas-foundation" target="_blank" rel="noreferrer">View repository ↗</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="wrap skills-layout">
+        <div class="section-heading sticky">
+          <p>How I work</p>
+          <h2>Support thinking with technical depth.</h2>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span>01</span><div><h3>Customer & case support</h3><p>Phone and email communication, issue ownership, clear updates, accurate records, escalation, and reliable follow-through.</p></div></div>
+          <div class="skill-item"><span>02</span><div><h3>Technical troubleshooting</h3><p>Windows, Linux, TCP/IP, DNS, DHCP, Wi-Fi, VPN, reachability, route analysis, ports, logs, and structured diagnosis.</p></div></div>
+          <div class="skill-item"><span>03</span><div><h3>Software delivery</h3><p>React, JavaScript, TypeScript, Python, FastAPI, SQL, REST APIs, Git, automated tests, and continuous integration.</p></div></div>
+          <div class="skill-item"><span>04</span><div><h3>Remote operations</h3><p>Scheduling, document preparation, data entry, file management, vendor coordination, and confidential record handling.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact wrap" id="contact">
+      <p class="eyebrow"><span></span> Available for support and technical opportunities</p>
+      <h2>Let’s solve the next problem.</h2>
+      <p>For customer support, IT support, help desk, or junior technical roles, reach me directly.</p>
+      <div class="contact-links">
+        <a href="mailto:akankshachavda1311@gmail.com">akankshachavda1311@gmail.com</a>
+        <a href="https://www.linkedin.com/in/akanksha-chavda" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/AC0731" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span>© <span id="year"></span> Akanksha Chavda</span><span>Built with semantic HTML, CSS, and JavaScript.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
