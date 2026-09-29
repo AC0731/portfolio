@@ -34,7 +34,7 @@
       </div>
       <div class="proof" aria-label="Portfolio highlights">
         <div><strong>3</strong><span>troubleshooting case studies</span></div>
-        <div><strong>PRs</strong><span>changes reviewed through branches</span></div>
+        <div><strong>PRs</strong><span>feature branch → PR → CI → merge</span></div>
         <div><strong>CI</strong><span>tests, audits, and builds</span></div>
       </div>
     </section>
@@ -68,7 +68,7 @@
             </div>
             <div>
               <h4>Verification</h4>
-              <p>Regression tests cover rebinding, timeout, capacity saturation, database persistence failure, and bounded output. Frontend and backend CI run separately.</p>
+              <p>Regression tests cover rebinding, timeout, capacity saturation, database persistence failure, and bounded output. A separate dated live check records the deployed example.com diagnostic and the dashboard availability observed during that run.</p>
             </div>
           </div>
           <p class="project-limit"><strong>Limit:</strong> the regression tests verify application behavior for these failure paths; they are not production-scale load testing.</p>
@@ -80,6 +80,7 @@
             <a href="https://github.com/AC0731/it-helpdesk-frontend" target="_blank" rel="noreferrer">Frontend code ↗</a>
             <a href="https://github.com/AC0731/it-helpdesk-backend" target="_blank" rel="noreferrer">Backend code ↗</a>
             <a href="https://github.com/AC0731/it-helpdesk-backend/blob/main/docs/case-studies/diagnostic-failure-trace.md" target="_blank" rel="noreferrer">Failure case study ↗</a>
+            <a href="https://github.com/AC0731/it-helpdesk-backend/blob/main/docs/evidence/live-smoke-2026-09-29.md" target="_blank" rel="noreferrer">Live check · 2026-09-29 ↗</a>
           </div>
         </div>
       </article>
@@ -107,7 +108,7 @@
             </div>
             <div>
               <h4>Verification</h4>
-              <p>The scenario harness exercises the same collectors used by the toolkit and tests each WARN → PASS transition for DNS, service state, and disk pressure.</p>
+              <p>The WARN → PASS transitions are automated regression/case-harness results using the same collector logic. Separately, the Windows Server 2025 verification checks the live environment and records its own health output.</p>
             </div>
           </div>
           <p class="project-limit"><strong>Limit:</strong> no customer or employer data is included, and the project does not claim production fleet ownership.</p>
@@ -118,6 +119,7 @@
             <a href="https://ac0731.github.io/enterprise-it-support-lab/" target="_blank" rel="noreferrer">Open live case study ↗</a>
             <a href="https://github.com/AC0731/enterprise-it-support-lab" target="_blank" rel="noreferrer">View repository ↗</a>
             <a href="https://github.com/AC0731/enterprise-it-support-lab/blob/main/docs/incidents/INC-003-troubleshooting-cases.md" target="_blank" rel="noreferrer">Troubleshooting cases ↗</a>
+            <a href="https://github.com/AC0731/enterprise-it-support-lab/blob/main/docs/evidence/windows-triage.txt" target="_blank" rel="noreferrer">Windows verification ↗</a>
           </div>
         </div>
       </article>
