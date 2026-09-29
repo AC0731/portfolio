@@ -2,18 +2,18 @@
 
 A small portfolio focused on **support engineering and secure full-stack systems**.
 
-The three featured projects are written around specific failure cases rather than technology lists:
+The three featured projects are written around issues I ran into while building, testing, and deploying them:
 
-- **SupportOps Diagnostic Portal** — DNS-rebinding protection, bounded diagnostics, request correlation, controlled timeout/database failure handling, and a trace from diagnostic request to ticket.
-- **Enterprise IT Support Lab** — controlled DNS, Windows service, and disk-pressure incidents with before/after evidence and preview-first remediation.
-- **SaaS Foundation** — credential-account boundary fixes plus Stripe duplicate/out-of-order webhook handling and dry-run reconciliation.
+- **SupportOps Diagnostic Portal** — I found a DNS validation gap in the outbound diagnostic flow, then added public-IP pinning, bounded execution, request correlation, and clearer timeout/database failure handling.
+- **Enterprise IT Support Lab** — I worked through DNS resolution failure, Windows service state, and disk-pressure cases with before/after evidence and preview-first remediation.
+- **SaaS Foundation** — I found an authentication boundary bug, then later had to troubleshoot Stripe webhook ordering, duplicate delivery, reconciliation, and a production schema-readiness failure.
 
-Each project separates:
+For each project I try to show:
 
-1. what problem was reproduced;
-2. what decision changed the design;
-3. how the change was verified;
-4. what the verification does **not** prove.
+1. the issue I ran into;
+2. how I narrowed down the cause;
+3. the decision or fix I made;
+4. how I verified it and what the verification does **not** prove.
 
 ## Development workflow
 
@@ -33,4 +33,4 @@ The portfolio itself is plain HTML/CSS/JavaScript. Open `index.html` in a browse
 
 ## Content policy
 
-Project claims are grounded in the linked repositories, tests, incident notes, and live demos. Controlled lab data is labeled as such. Mocked or policy-level tests are not described as production or end-to-end verification.
+Project claims are grounded in the linked repositories, tests, incident notes, and live demos. Test coverage and live deployment checks are described separately so one is not presented as the other.
