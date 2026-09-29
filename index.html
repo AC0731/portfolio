@@ -27,13 +27,13 @@
     <section class="hero wrap">
       <div class="eyebrow"><span></span> Support engineering · Secure full-stack systems</div>
       <h1>I troubleshoot systems, then build the fix.</h1>
-      <p class="hero-copy">I’m Akanksha Chavda. I work across IT support and software, with a focus on what happens when the normal path fails: a hostname changes after validation, a billing event arrives twice, a Windows service stops, or a database is unavailable. The projects below show the decision, the fix, the test, and the remaining limit.</p>
+      <p class="hero-copy">I’m Akanksha Chavda. I work across IT support and software. While building these projects I ran into issues around DNS validation, billing events, Windows services, database readiness, and deployment. The projects below show how I traced those problems, what I changed, and how I checked the result.</p>
       <div class="actions">
         <a class="button primary" href="#projects">View projects <span aria-hidden="true">↘</span></a>
         <a class="button secondary" href="https://github.com/AC0731" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
       </div>
       <div class="proof" aria-label="Portfolio highlights">
-        <div><strong>3</strong><span>failure-focused case studies</span></div>
+        <div><strong>3</strong><span>troubleshooting case studies</span></div>
         <div><strong>PRs</strong><span>changes reviewed through branches</span></div>
         <div><strong>CI</strong><span>tests, audits, and builds</span></div>
       </div>
@@ -42,7 +42,7 @@
     <section class="section wrap" id="projects">
       <div class="section-heading">
         <p>Selected work</p>
-        <h2>Three projects, each with a failure story.</h2>
+        <h2>Three projects, each with a troubleshooting story.</h2>
       </div>
 
       <article class="project featured">
@@ -71,7 +71,7 @@
               <p>Regression tests cover rebinding, timeout, capacity saturation, database persistence failure, and bounded output. Frontend and backend CI run separately.</p>
             </div>
           </div>
-          <p class="project-limit"><strong>Limit:</strong> the controlled tests verify application behavior under injected failures; they are not production-scale load testing.</p>
+          <p class="project-limit"><strong>Limit:</strong> the regression tests verify application behavior for these failure paths; they are not production-scale load testing.</p>
           <div class="tags" aria-label="SupportOps technologies">
             <span>React</span><span>FastAPI</span><span>Python</span><span>SSRF Hardening</span><span>Observability</span><span>Vitest</span><span>Pytest</span>
           </div>
@@ -92,32 +92,32 @@
             <span>PowerShell · Python · GitHub Actions</span>
           </div>
           <h3>Enterprise IT Support Lab</h3>
-          <p class="lede">A Windows troubleshooting lab with endpoint checks, PowerShell remediation, and controlled incidents for DNS failure, a stopped service, and disk pressure.</p>
+          <p class="lede">A Windows troubleshooting project with endpoint checks, PowerShell remediation, and documented DNS, service-state, and disk-pressure cases.</p>
           <div class="project-media">
             <img src="https://ac0731.github.io/enterprise-it-support-lab/screenshots/windows-triage-live.png?v=20260929b" alt="Windows endpoint triage output showing system, disk, DNS, TCP and service health checks" loading="lazy">
           </div>
           <div class="project-grid">
             <div>
               <h4>Problem</h4>
-              <p>A healthy collector run proves very little about troubleshooting. I needed controlled cases where the evidence actually points to different failure domains.</p>
+              <p>While extending the toolkit, I found that a healthy collector run was not enough to explain how I would handle DNS failure, a stopped service, or disk pressure.</p>
             </div>
             <div>
               <h4>Decision</h4>
-              <p>Build three sanitized incidents with competing hypotheses, before/after evidence, preview-first changes, retests, and escalation notes.</p>
+              <p>I documented the three troubleshooting cases with competing hypotheses, before/after evidence, preview-first changes, retests, and escalation notes.</p>
             </div>
             <div>
               <h4>Verification</h4>
               <p>The scenario harness exercises the same collectors used by the toolkit and tests each WARN → PASS transition for DNS, service state, and disk pressure.</p>
             </div>
           </div>
-          <p class="project-limit"><strong>Limit:</strong> these are controlled lab incidents, not customer outages or evidence of production fleet ownership.</p>
+          <p class="project-limit"><strong>Limit:</strong> no customer or employer data is included, and the project does not claim production fleet ownership.</p>
           <div class="tags" aria-label="Enterprise IT Support Lab technologies">
             <span>PowerShell</span><span>Windows</span><span>Python</span><span>DNS</span><span>TCP/IP</span><span>Event Logs</span><span>GitHub Actions</span>
           </div>
           <div class="project-links">
             <a href="https://ac0731.github.io/enterprise-it-support-lab/" target="_blank" rel="noreferrer">Open live case study ↗</a>
             <a href="https://github.com/AC0731/enterprise-it-support-lab" target="_blank" rel="noreferrer">View repository ↗</a>
-            <a href="https://github.com/AC0731/enterprise-it-support-lab/blob/main/docs/incidents/INC-003-controlled-troubleshooting-scenarios.md" target="_blank" rel="noreferrer">Controlled incidents ↗</a>
+            <a href="https://github.com/AC0731/enterprise-it-support-lab/blob/main/docs/incidents/INC-003-troubleshooting-cases.md" target="_blank" rel="noreferrer">Troubleshooting cases ↗</a>
           </div>
         </div>
       </article>
@@ -137,7 +137,7 @@
           <div class="project-grid">
             <div>
               <h4>Problem</h4>
-              <p>The auth flow could let an existing passwordless account gain a password without a verification step, and the Stripe webhook had no duplicate-event or ordering strategy.</p>
+              <p>While working through the auth flow, I found that an existing passwordless account could gain a password without a verification step. Later, the Stripe webhook also needed duplicate-event and ordering protection.</p>
             </div>
             <div>
               <h4>Decision</h4>
