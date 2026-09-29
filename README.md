@@ -17,7 +17,7 @@ For each project I try to show:
 
 ## Development workflow
 
-Substantive changes are made on feature branches and opened as pull requests. CI runs before merge.
+Substantive changes use feature branches, pull requests, automated CI, then merge. This describes the repository workflow; it does not imply independent reviewer approval.
 
 The repositories use a mix of:
 
