@@ -5,6 +5,7 @@ A lightweight, responsive portfolio for customer support, IT support, help desk,
 ## Featured projects
 
 - SupportOps Diagnostic Portal — React/Vite frontend with a FastAPI backend
+- Enterprise IT Support Lab — Windows/PowerShell endpoint diagnostics, incident triage, verified GitHub Actions evidence, and support runbooks
 - SaaS Foundation — Next.js, TypeScript, Prisma, PostgreSQL, NextAuth, and Stripe
 
 ## Run locally
