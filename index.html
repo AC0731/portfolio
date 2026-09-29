@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Akanksha Chavda — IT support, full-stack engineering, troubleshooting, and security-focused project portfolio." />
+  <meta name="description" content="Akanksha Chavda — support engineering, secure full-stack systems, and troubleshooting case studies." />
   <title>Akanksha Chavda — Support & Software Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1221'/%3E%3Cpath d='M17 45 29 17h7l12 28h-8l-2-6H27l-2 6zm13-13h6l-3-8z' fill='%235eead4'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,52 +25,53 @@
 
   <main id="top">
     <section class="hero wrap">
-      <div class="eyebrow"><span></span> IT support · Full-stack engineering · Security-focused troubleshooting</div>
-      <h1>I build clear, dependable systems for people who need answers.</h1>
-      <p class="hero-copy">I’m Akanksha Chavda, an English-speaking support professional and developer based in Ahmedabad, India. My work combines technical troubleshooting, full-stack development, security-minded engineering, and support workflows that are designed to be observable, testable, and maintainable.</p>
+      <div class="eyebrow"><span></span> Support engineering · Secure full-stack systems</div>
+      <h1>I troubleshoot systems, then build the fix.</h1>
+      <p class="hero-copy">I’m Akanksha Chavda. I work across IT support and software, with a focus on what happens when the normal path fails: a hostname changes after validation, a billing event arrives twice, a Windows service stops, or a database is unavailable. The projects below show the decision, the fix, the test, and the remaining limit.</p>
       <div class="actions">
         <a class="button primary" href="#projects">View projects <span aria-hidden="true">↘</span></a>
         <a class="button secondary" href="https://github.com/AC0731" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
       </div>
       <div class="proof" aria-label="Portfolio highlights">
-        <div><strong>3</strong><span>technical case studies</span></div>
-        <div><strong>14+</strong><span>months remote administration</span></div>
-        <div><strong>CI</strong><span>tests and GitHub Actions</span></div>
+        <div><strong>3</strong><span>failure-focused case studies</span></div>
+        <div><strong>PRs</strong><span>changes reviewed through branches</span></div>
+        <div><strong>CI</strong><span>tests, audits, and builds</span></div>
       </div>
     </section>
 
     <section class="section wrap" id="projects">
       <div class="section-heading">
         <p>Selected work</p>
-        <h2>Projects built to solve operational problems.</h2>
+        <h2>Three projects, each with a failure story.</h2>
       </div>
 
       <article class="project featured">
         <div class="project-number">01</div>
         <div class="project-body">
           <div class="project-topline">
-            <span class="status">Full-stack support & security project</span>
+            <span class="status">IT support platform</span>
             <span>React · FastAPI · SQLAlchemy</span>
           </div>
           <h3>SupportOps Diagnostic Portal</h3>
-          <p class="lede">A full-stack IT support platform combining network diagnostics, support case management, security-aware target validation, observability, and regression-tested troubleshooting workflows.</p>
+          <p class="lede">A React/FastAPI support workspace for public-target diagnostics, troubleshooting notes, and tickets. The most important work in this project is the network boundary and failure handling, not the dashboard itself.</p>
           <div class="project-media">
             <img src="https://raw.githubusercontent.com/AC0731/it-helpdesk-frontend/main/screenshots/01-dashboard-overview.png" alt="SupportOps diagnostic and ticket operations dashboard" loading="lazy">
           </div>
           <div class="project-grid">
             <div>
-              <h4>The problem</h4>
-              <p>Technical evidence is often scattered across commands, notes, and ticket fields. Support agents need a repeatable path from diagnosis to documented action.</p>
+              <h4>Problem</h4>
+              <p>A hostname could pass validation, then resolve differently when the network tool used it. That left a DNS-rebinding gap in a service that makes outbound connections for users.</p>
             </div>
             <div>
-              <h4>What I built</h4>
-              <p>Public-target diagnostics, ticket lifecycle management, analytics, troubleshooting insights, request correlation, database readiness checks, redaction, bounded rate limiting, and safe cloud fallbacks.</p>
+              <h4>Decision</h4>
+              <p>Validate again at the execution boundary, reject mixed public/private answers, pin the approved public IP, and keep the same request reference through the result and ticket.</p>
             </div>
             <div>
-              <h4>Engineering proof</h4>
-              <p>A DNS-rebinding/TOCTOU gap was reproduced with a regression test, fixed by pinning diagnostics to validated public IPs, then followed by dependency-audit remediation and green frontend/backend CI.</p>
+              <h4>Verification</h4>
+              <p>Regression tests cover rebinding, timeout, capacity saturation, database persistence failure, and bounded output. Frontend and backend CI run separately.</p>
             </div>
           </div>
+          <p class="project-limit"><strong>Limit:</strong> the controlled tests verify application behavior under injected failures; they are not production-scale load testing.</p>
           <div class="tags" aria-label="SupportOps technologies">
             <span>React</span><span>FastAPI</span><span>Python</span><span>SSRF Hardening</span><span>Observability</span><span>Vitest</span><span>Pytest</span>
           </div>
@@ -78,6 +79,7 @@
             <a href="https://it-support-diagnostic-portal.vercel.app" target="_blank" rel="noreferrer">Open live demo ↗</a>
             <a href="https://github.com/AC0731/it-helpdesk-frontend" target="_blank" rel="noreferrer">Frontend code ↗</a>
             <a href="https://github.com/AC0731/it-helpdesk-backend" target="_blank" rel="noreferrer">Backend code ↗</a>
+            <a href="https://github.com/AC0731/it-helpdesk-backend/blob/main/docs/case-studies/diagnostic-failure-trace.md" target="_blank" rel="noreferrer">Failure case study ↗</a>
           </div>
         </div>
       </article>
@@ -90,30 +92,32 @@
             <span>PowerShell · Python · GitHub Actions</span>
           </div>
           <h3>Enterprise IT Support Lab</h3>
-          <p class="lede">A Windows endpoint diagnostics and incident-triage toolkit built around evidence-first troubleshooting, controlled remediation, and useful escalation handoffs.</p>
+          <p class="lede">A Windows troubleshooting lab with endpoint checks, PowerShell remediation, and controlled incidents for DNS failure, a stopped service, and disk pressure.</p>
           <div class="project-media">
             <img src="https://ac0731.github.io/enterprise-it-support-lab/screenshots/windows-triage-live.png?v=20260929b" alt="Windows endpoint triage output showing system, disk, DNS, TCP and service health checks" loading="lazy">
           </div>
           <div class="project-grid">
             <div>
-              <h4>The workflow</h4>
-              <p>Collect system, disk, DNS, TCP, service, and Event Log evidence before changes; isolate the failure domain; apply the smallest reversible fix; then retest and document.</p>
+              <h4>Problem</h4>
+              <p>A healthy collector run proves very little about troubleshooting. I needed controlled cases where the evidence actually points to different failure domains.</p>
             </div>
             <div>
-              <h4>What I built</h4>
-              <p>PowerShell endpoint triage and network remediation, Python health collectors and P1–P4 scoring, structured JSON/Markdown reports, runbooks, escalation guidance, and CI.</p>
+              <h4>Decision</h4>
+              <p>Build three sanitized incidents with competing hypotheses, before/after evidence, preview-first changes, retests, and escalation notes.</p>
             </div>
             <div>
-              <h4>Engineering proof</h4>
-              <p>Windows Server 2025 verification completed the endpoint health checks successfully, all 5 regression tests passed, and the repository retains the troubleshooting and fix history behind the final implementation.</p>
+              <h4>Verification</h4>
+              <p>The scenario harness exercises the same collectors used by the toolkit and tests each WARN → PASS transition for DNS, service state, and disk pressure.</p>
             </div>
           </div>
+          <p class="project-limit"><strong>Limit:</strong> these are controlled lab incidents, not customer outages or evidence of production fleet ownership.</p>
           <div class="tags" aria-label="Enterprise IT Support Lab technologies">
             <span>PowerShell</span><span>Windows</span><span>Python</span><span>DNS</span><span>TCP/IP</span><span>Event Logs</span><span>GitHub Actions</span>
           </div>
           <div class="project-links">
             <a href="https://ac0731.github.io/enterprise-it-support-lab/" target="_blank" rel="noreferrer">Open live case study ↗</a>
             <a href="https://github.com/AC0731/enterprise-it-support-lab" target="_blank" rel="noreferrer">View repository ↗</a>
+            <a href="https://github.com/AC0731/enterprise-it-support-lab/blob/main/docs/incidents/INC-003-controlled-troubleshooting-scenarios.md" target="_blank" rel="noreferrer">Controlled incidents ↗</a>
           </div>
         </div>
       </article>
@@ -122,34 +126,36 @@
         <div class="project-number">03</div>
         <div class="project-body">
           <div class="project-topline">
-            <span class="status">Full-stack application security project</span>
+            <span class="status">Subscription application</span>
             <span>Next.js · TypeScript · PostgreSQL</span>
           </div>
           <h3>SaaS Foundation</h3>
-          <p class="lede">A subscription SaaS foundation covering authentication, authorization, billing lifecycles, operational health, dependency security, and application-security regression testing.</p>
+          <p class="lede">A Next.js subscription application with credentials auth, user-owned data, Stripe billing, rate limits, and a billing recovery path for duplicate or out-of-order webhook delivery.</p>
           <div class="project-media">
             <img src="https://raw.githubusercontent.com/AC0731/saas-foundation/master/screenshots/pro-dashboard-billing.png" alt="SaaS Foundation authenticated Pro workspace and billing view" loading="lazy">
           </div>
           <div class="project-grid">
             <div>
-              <h4>Product flow</h4>
-              <p>Account creation and sign-in, protected dashboards, database-backed notes, free and Pro limits, Stripe Checkout, and customer billing management.</p>
+              <h4>Problem</h4>
+              <p>The auth flow could let an existing passwordless account gain a password without a verification step, and the Stripe webhook had no duplicate-event or ordering strategy.</p>
             </div>
             <div>
-              <h4>Security</h4>
-              <p>Explicit credential policy, ownership-scoped server actions, bcrypt hashing, hardened Stripe webhook handling, browser security headers, database-backed rate limiting, and dependency audits.</p>
+              <h4>Decision</h4>
+              <p>Make credential transitions explicit, process Stripe events idempotently, reject stale or superseded subscription events, and add dry-run reconciliation before repair.</p>
             </div>
             <div>
-              <h4>Engineering proof</h4>
-              <p>A passwordless-account claim flaw was reproduced and fixed, framework/auth dependencies were remediated after audit findings, and the final lint/test/build/security CI pipeline passes.</p>
+              <h4>Verification</h4>
+              <p>Auth and billing policy tests cover the failure cases; CI also runs dependency audit, lint, Prisma validation, tests, and a production build.</p>
             </div>
           </div>
+          <p class="project-limit"><strong>Limit:</strong> CI does not contain Stripe credentials, so policy tests are not described as end-to-end Stripe test-mode webhook delivery.</p>
           <div class="tags" aria-label="SaaS Foundation technologies">
             <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>NextAuth</span><span>Stripe</span><span>AppSec</span><span>Vitest</span>
           </div>
           <div class="project-links">
             <a href="https://saas-foundation-three.vercel.app/" target="_blank" rel="noreferrer">Open live demo ↗</a>
             <a href="https://github.com/AC0731/saas-foundation" target="_blank" rel="noreferrer">View repository ↗</a>
+            <a href="https://github.com/AC0731/saas-foundation/blob/master/docs/incidents/INC-002-stripe-webhook-reliability.md" target="_blank" rel="noreferrer">Billing reliability case ↗</a>
           </div>
         </div>
       </article>
@@ -159,13 +165,13 @@
       <div class="wrap skills-layout">
         <div class="section-heading sticky">
           <p>How I work</p>
-          <h2>Support thinking with technical depth.</h2>
+          <h2>What I can explain in an interview.</h2>
         </div>
         <div class="skill-list">
           <div class="skill-item"><span>01</span><div><h3>Customer & case support</h3><p>Phone and email communication, issue ownership, clear updates, accurate records, escalation, and reliable follow-through.</p></div></div>
           <div class="skill-item"><span>02</span><div><h3>Technical troubleshooting</h3><p>Windows, Linux, TCP/IP, DNS, DHCP, Wi-Fi, VPN, reachability, route analysis, ports, logs, and structured diagnosis.</p></div></div>
           <div class="skill-item"><span>03</span><div><h3>Software delivery</h3><p>React, JavaScript, TypeScript, Python, FastAPI, SQL, REST APIs, Git, automated tests, and continuous integration.</p></div></div>
-          <div class="skill-item"><span>04</span><div><h3>Security & reliability</h3><p>SSRF boundaries, authentication policy, dependency auditing, security headers, readiness checks, request correlation, regression testing, and incident/runbook documentation.</p></div></div>
+          <div class="skill-item"><span>04</span><div><h3>Security & reliability</h3><p>SSRF boundaries, credential transitions, webhook idempotency, dependency audits, readiness checks, request correlation, regression tests, and recovery runbooks.</p></div></div>
           <div class="skill-item"><span>05</span><div><h3>Remote operations</h3><p>Scheduling, documentation, data handling, vendor coordination, case ownership, and clear asynchronous communication.</p></div></div>
         </div>
       </div>
@@ -174,7 +180,7 @@
     <section class="contact wrap" id="contact">
       <p class="eyebrow"><span></span> Available for support and technical opportunities</p>
       <h2>Let’s solve the next problem.</h2>
-      <p>For IT support, full-stack engineering, infrastructure, application security, cybersecurity, or technical operations opportunities, reach me directly.</p>
+      <p>For IT support, support engineering, full-stack development, application security, or technical operations roles, reach me directly.</p>
       <div class="contact-links">
         <a href="mailto:akankshachavda1311@gmail.com">akankshachavda1311@gmail.com</a>
         <a href="https://www.linkedin.com/in/akanksha-chavda" target="_blank" rel="noreferrer">LinkedIn ↗</a>
