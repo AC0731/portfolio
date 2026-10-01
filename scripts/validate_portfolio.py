@@ -34,8 +34,8 @@ def main() -> int:
     }
 
     assert not duplicate_ids, f"Duplicate HTML IDs: {sorted(duplicate_ids)}"
-    assert parser.project_articles == 3, (
-        f"Expected 3 project cards, found {parser.project_articles}"
+    assert parser.project_articles == 4, (
+        f"Expected 4 project cards, found {parser.project_articles}"
     )
     assert all(parser.image_sources), "Every project image must have a src."
     assert Path("styles.css").exists(), "styles.css is missing."
@@ -46,6 +46,7 @@ def main() -> int:
     assert "supportops diagnostic portal" in combined
     assert "enterprise it support lab" in combined
     assert "saas foundation" in combined
+    assert "curveclarity" in combined
     assert "limit:" in index.lower()
 
     print("Portfolio structure and positioning checks passed.")
