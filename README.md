@@ -6,7 +6,8 @@ The three troubleshooting case studies are written around issues I ran into whil
 
 - **SupportOps Diagnostic Portal** — I found a DNS validation gap in the outbound diagnostic flow, then added public-IP pinning, bounded execution, request correlation, and clearer timeout/database failure handling.
 - **Enterprise IT Support Lab** — I worked through DNS resolution failure, Windows service state, and disk-pressure cases with before/after evidence and preview-first remediation.
-- **SaaS Foundation** — I found an authentication boundary bug, then later had to troubleshoot Stripe webhook ordering, duplicate delivery, reconciliation, and a production schema-readiness failure.\n- **CurveClarity** — an in-progress Meteora DBC launch transparency prototype with illustrative curve profiles, editable launch assumptions, disclosure checks, and a JSON brief export. The current source has no DBC SDK quote simulation, wallet flow, devnet transaction, or live deployment.
+- **SaaS Foundation** — I found an authentication boundary bug, then later had to troubleshoot Stripe webhook ordering, duplicate delivery, reconciliation, and a production schema-readiness failure.
+- **CurveClarity** — an in-progress Meteora DBC launch transparency prototype with illustrative curve profiles, editable launch assumptions, disclosure checks, and a JSON brief export. The current source has no DBC SDK quote simulation, wallet flow, devnet transaction, or live deployment.
 
 For each project I try to show:
 
