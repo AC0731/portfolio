@@ -34,8 +34,8 @@ def main() -> int:
     }
 
     assert not duplicate_ids, f"Duplicate HTML IDs: {sorted(duplicate_ids)}"
-    assert parser.project_articles == 5, (
-        f"Expected 5 project cards, found {parser.project_articles}"
+    assert parser.project_articles == 6, (
+        f"Expected 6 project cards, found {parser.project_articles}"
     )
     assert all(parser.image_sources), "Every project image must have a src."
     assert Path("styles.css").exists(), "styles.css is missing."
