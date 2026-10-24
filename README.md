@@ -2,12 +2,13 @@
 
 A small portfolio focused on **support engineering and secure full-stack systems**.
 
-The three troubleshooting case studies are written around issues I ran into while building, testing, and deploying them. Two additional product projects show an early live pet-care platform and an explicitly labeled launch-design prototype:
+The three troubleshooting case studies are written around issues I ran into while building, testing, and deploying them. The product and go-to-market projects cover an early live pet-care platform, a completed clinic pilot plan, and an explicitly labeled launch-design prototype:
 
 - **SupportOps Diagnostic Portal** — I found a DNS validation gap in the outbound diagnostic flow, then added public-IP pinning, bounded execution, request correlation, and clearer timeout/database failure handling.
 - **Enterprise IT Support Lab** — I worked through DNS resolution failure, Windows service state, and disk-pressure cases with before/after evidence and preview-first remediation.
 - **SaaS Foundation** — I found an authentication boundary bug, then later had to troubleshoot Stripe webhook ordering, duplicate delivery, reconciliation, and a production schema-readiness failure.
 - **VetPulse AI** — a live, early-stage Gujarat pet-care platform built with React, Vite, Cloudflare Workers, and D1. It brings public veterinary listings, pet profiles, local essentials, and pending appointment requests into one product flow. Clinic coverage is incomplete; location matching may be approximate; clinics have not provided live availability or queue data; requests are not confirmed until a clinic responds; online payments are not enabled. Listings do not imply clinic partnerships.
+- **VetPulse AI: Ahmedabad Clinic Pilot Go-to-Market Plan** — a completed [Handshake showcase project](https://app.joinhandshake.com/ai-showcase/projects/3663684) that earned the AI project builder badge. I used Clay to identify 20 Ahmedabad-area clinic candidates, curated the list, checked official service details for three priority prospects, and prepared a value-first outreach message with reply, demo, and pilot-interest measures. This is research and planning; prospects are not confirmed partners and no outreach or pilot results are claimed.
 - **CurveClarity** — an in-progress Meteora DBC launch transparency prototype with illustrative curve profiles, editable launch assumptions, disclosure checks, and a JSON brief export. The current source has no DBC SDK quote simulation, wallet flow, devnet transaction, or live deployment.
 
 For each project I try to show:
