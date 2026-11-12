@@ -269,33 +269,33 @@
         <div class="project-number">07</div>
         <div class="project-body">
           <div class="project-topline">
-            <span class="status">Reusable AI API · Source available</span>
-            <span>Python · FastAPI · OpenAI API · SQLite</span>
+            <span class="status">Early version · API</span>
+            <span>Python · FastAPI · OpenAI · SQLite</span>
           </div>
           <h3>Aki Document Agent</h3>
-          <p class="lede">A standalone service for uploading text-based PDFs and asking questions grounded in their contents. It retrieves relevant passages, returns page-level source excerpts, and can use a restricted calculator tool. The HTTP API is designed to connect to other apps.</p>
+          <p class="lede">I wanted a way to ask questions about a PDF and see which pages the answers came from. I built a small API that searches the document, sends useful passages to OpenAI, and returns an answer with its sources. It can also use a calculator for basic arithmetic.</p>
           <div class="project-grid">
             <div>
-              <h4>How it works</h4>
-              <p>PDF text is chunked and stored in SQLite. BM25 search retrieves likely passages, which are sent to an OpenAI model for a cited answer.</p>
+              <h4>What I built</h4>
+              <p>PDF text extraction, BM25 search, SQLite storage, API-key protection, and endpoints for uploading files and asking questions.</p>
             </div>
             <div>
-              <h4>Integration</h4>
-              <p>FastAPI endpoints support document upload, question answering, listing, and deletion. Other backends can call the service with a bearer token.</p>
+              <h4>Using it elsewhere</h4>
+              <p>Other apps can connect through the API. The repository has setup steps and a JavaScript example.</p>
             </div>
             <div>
-              <h4>Current state</h4>
-              <p>The source and Docker setup are available in a new public repository. It needs OpenAI credentials and a deployment with persistent storage before it can be used online.</p>
+              <h4>What’s next</h4>
+              <p>I still need to add my API keys, deploy it with persistent storage, and try it with real PDFs and questions.</p>
             </div>
           </div>
-          <p class="project-limit"><strong>Limit:</strong> this is an initial implementation, not a deployed service or evaluated production system. Scanned PDFs, multiple user accounts, and per-user document isolation are not supported yet.</p>
+          <p class="project-limit"><strong>Current limits:</strong> it only reads PDFs with selectable text. There is no OCR or separate document access for multiple users yet.</p>
           <div class="tags" aria-label="Aki Document Agent technologies">
-            <span>Python</span><span>FastAPI</span><span>OpenAI API</span><span>BM25 retrieval</span><span>SQLite</span><span>Docker</span><span>Evaluation runner</span>
+            <span>Python</span><span>FastAPI</span><span>OpenAI API</span><span>BM25 search</span><span>SQLite</span><span>Docker</span><span>Answer checks</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/AC0731/aki-document-agent" target="_blank" rel="noreferrer">Open API repository ↗</a>
-            <a href="https://github.com/AC0731/aki-document-agent#use-it-from-another-app" target="_blank" rel="noreferrer">Integration guide ↗</a>
-            <a href="https://github.com/AC0731/aki-document-agent/tree/main/evals" target="_blank" rel="noreferrer">Evaluation starter ↗</a>
+            <a href="https://github.com/AC0731/aki-document-agent" target="_blank" rel="noreferrer">View the code ↗</a>
+            <a href="https://github.com/AC0731/aki-document-agent#use-it-from-another-app" target="_blank" rel="noreferrer">Connect another app ↗</a>
+            <a href="https://github.com/AC0731/aki-document-agent/tree/main/evals" target="_blank" rel="noreferrer">Try the answer checks ↗</a>
           </div>
         </div>
       </article>
