@@ -265,6 +265,40 @@
           </div>
         </div>
       </article>
+      <article class="project">
+        <div class="project-number">07</div>
+        <div class="project-body">
+          <div class="project-topline">
+            <span class="status">Reusable AI API · Source available</span>
+            <span>Python · FastAPI · OpenAI API · SQLite</span>
+          </div>
+          <h3>Aki Document Agent</h3>
+          <p class="lede">A standalone service for uploading text-based PDFs and asking questions grounded in their contents. It retrieves relevant passages, returns page-level source excerpts, and can use a restricted calculator tool. The HTTP API is designed to connect to other apps.</p>
+          <div class="project-grid">
+            <div>
+              <h4>How it works</h4>
+              <p>PDF text is chunked and stored in SQLite. BM25 search retrieves likely passages, which are sent to an OpenAI model for a cited answer.</p>
+            </div>
+            <div>
+              <h4>Integration</h4>
+              <p>FastAPI endpoints support document upload, question answering, listing, and deletion. Other backends can call the service with a bearer token.</p>
+            </div>
+            <div>
+              <h4>Current state</h4>
+              <p>The source and Docker setup are available in a new public repository. It needs OpenAI credentials and a deployment with persistent storage before it can be used online.</p>
+            </div>
+          </div>
+          <p class="project-limit"><strong>Limit:</strong> this is an initial implementation, not a deployed service or evaluated production system. Scanned PDFs, multiple user accounts, and per-user document isolation are not supported yet.</p>
+          <div class="tags" aria-label="Aki Document Agent technologies">
+            <span>Python</span><span>FastAPI</span><span>OpenAI API</span><span>BM25 retrieval</span><span>SQLite</span><span>Docker</span><span>Evaluation runner</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AC0731/aki-document-agent" target="_blank" rel="noreferrer">Open API repository ↗</a>
+            <a href="https://github.com/AC0731/aki-document-agent#use-it-from-another-app" target="_blank" rel="noreferrer">Integration guide ↗</a>
+            <a href="https://github.com/AC0731/aki-document-agent/tree/main/evals" target="_blank" rel="noreferrer">Evaluation starter ↗</a>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section class="section skills-section" id="skills">
